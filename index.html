@@ -255,8 +255,7 @@
   <br>
   <button class="primary" id="chatSubmit">Find matches</button>
   <div class="understood" id="understood" style="display:none;">
-    <p>Here's what I picked up — click anything to correct it:</p>
-    <div id="understoodRows"></div>
+    <p id="understoodSummary"></p>
     <div class="note" id="chatNote" style="display:none;"></div>
   </div>
 </div>
@@ -369,45 +368,48 @@ renderWizardStep();
 setMode('wizard');
 
 // ---------- chat ----------
+const IRISH_PLACES = ['ireland', 'dublin', 'cork', 'galway', 'limerick', 'waterford', 'sligo', 'athlone', 'kilkenny', 'tralee', 'drogheda', 'home'];
+
 function parseText(text) {
   const lower = text.toLowerCase();
   const result = {};
 
-  if (/\bno college\b|\bapprenticeship\b|\bwithout college\b|\bskip college\b|\btrade\b/.test(lower)) {
+  if (/\bno college\b|\bnot go(ing)? to college\b|\bdon.?t want (to )?(go to )?college\b|\bnot interested in college\b|\bwithout college\b|\bskip college\b|\bapprenticeship\b|\btrade\b/.test(lower)) {
     result.college = false;
-  } else if (/\bcollege\b|\buniversity\b|\bdegree\b|\buni\b/.test(lower)) {
+  } else if (/\bcollege\b|\buniversity\b|\bdegree\b|\buni\b|\bthird level\b/.test(lower)) {
     result.college = true;
   }
 
-  if (/\bstay in ireland\b|\bdon.?t want to move\b|\bnot move\b|\bstay home\b/.test(lower)) {
+  const abroadMentioned = /\babroad\b|\banother country\b|\boverseas\b/.test(lower);
+  if (!abroadMentioned && (/\bstay(ing)? (in|home)\b/.test(lower) || IRISH_PLACES.some(p => lower.includes(`in ${p}`)))) {
     result.openToMoving = false;
-  } else if (/\bmove abroad\b|\bmove away\b|\babroad\b|\bopen to moving\b|\bcan move\b|\bwilling to move\b/.test(lower)) {
+  } else if (/\bmove abroad\b|\bmove away\b|\babroad\b|\bopen to moving\b|\bcan move\b|\bwilling to move\b|\brelocate\b|\boverseas\b/.test(lower)) {
     result.openToMoving = true;
   }
 
-  if (/\b(hate|bad at|not good at|dislike)\s+maths?\b/.test(lower)) {
+  if (/\b(hate|bad at|not good at|dislike|don.?t like|not into|no good at)\s+maths?\b/.test(lower)) {
     result.likesMaths = false;
-  } else if (/\bmaths?\b/.test(lower)) {
+  } else if (/\b(like|love|good at|great at|enjoy)\s+maths?\b|\bmaths?\b/.test(lower)) {
     result.likesMaths = true;
   }
 
-  if (/\bhigh points\b|\b5\d{2}\+?\s*points\b|\btop grades\b/.test(lower)) {
+  if (/\bhigh points\b|\b[4-6]\d{2}\+?\s*points\b|\btop grades\b/.test(lower)) {
     result.highPointsLikely = true;
-  } else if (/\blow points\b|\bnot expecting high points\b/.test(lower)) {
+  } else if (/\blow points\b|\bnot expecting high points\b|\bnot great grades\b/.test(lower)) {
     result.highPointsLikely = false;
   }
 
-  if (/primary school teach|teach.*primary/.test(lower)) {
+  if (/primary school teach|teach.*primary|\bteach kids\b|\bteach young\b/.test(lower)) {
     result.subjectFocus = 'primary';
-  } else if (/post-?primary|secondary school teach|teach.*secondary/.test(lower)) {
+  } else if (/post-?primary|secondary school teach|teach.*secondary|\bteach teenagers\b/.test(lower)) {
     result.subjectFocus = 'post-primary';
   }
 
   // signals we notice but can't actually filter on yet — shown back for honesty
   const extras = [];
-  const salaryMatch = lower.match(/(\d{2,3})\s*k\b/);
-  if (salaryMatch) extras.push(`a target salary around €${salaryMatch[1]}k`);
-  const fields = ['business', 'tech', 'software', 'nursing', 'teaching', 'law', 'engineering', 'finance', 'trades', 'hair', 'medicine', 'accounting'];
+  const salaryMatch = lower.match(/(?:€|euro\s*)?(\d{2,3})\s*k\b|(\d{2,3}),?000\s*(euro|a year)/);
+  if (salaryMatch) extras.push(`a target salary around €${salaryMatch[1] || salaryMatch[2]}k`);
+  const fields = ['business', 'tech', 'software', 'nursing', 'teaching', 'law', 'engineering', 'finance', 'trades', 'hair', 'medicine', 'accounting', 'history', 'art', 'science', 'psychology', 'music', 'sport'];
   const foundField = fields.find(f => lower.includes(f));
   if (foundField) extras.push(`an interest in ${foundField}`);
 
@@ -437,30 +439,28 @@ document.getElementById('chatSubmit').addEventListener('click', () => {
   }, 500);
 });
 
+const SUMMARY_PHRASES = {
+  college: v => v ? 'wants to go to college' : 'no interest in college',
+  openToMoving: v => v ? 'open to moving abroad' : 'wants to stay in Ireland',
+  likesMaths: v => v ? 'likes maths' : 'not big on maths',
+  highPointsLikely: v => v ? 'expecting high CAO points' : 'not expecting very high points',
+  subjectFocus: v => v === 'primary' ? 'interested in primary teaching' : 'interested in post-primary teaching',
+};
+
 function renderUnderstood(extras) {
   const wrap = document.getElementById('understood');
-  const rows = document.getElementById('understoodRows');
+  const summary = document.getElementById('understoodSummary');
   wrap.style.display = 'block';
 
-  rows.innerHTML = STEPS.map(step => `
-    <div class="row">
-      <label>${step.label}</label>
-      <div class="opts">
-        ${step.opts.map(([text, val]) => `<button class="opt${state[step.key] === val ? ' active' : ''}" data-key="${step.key}" data-val="${val}">${text}</button>`).join('')}
-      </div>
-    </div>
-  `).join('');
+  const understood = STEPS
+    .filter(step => state[step.key] !== undefined)
+    .map(step => SUMMARY_PHRASES[step.key](state[step.key]));
 
-  rows.querySelectorAll('button.opt').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const raw = btn.dataset.val;
-      const key = btn.dataset.key;
-      state[key] = raw === 'true' ? true : (raw === 'false' ? false : raw);
-      rows.querySelectorAll(`button.opt[data-key="${key}"]`).forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      render();
-    });
-  });
+  if (understood.length) {
+    summary.textContent = `Understood: ${understood.join(', ')}.`;
+  } else {
+    summary.textContent = "Couldn't pick up a clear answer from that — try rephrasing, or switch to the wizard.";
+  }
 
   const noteEl = document.getElementById('chatNote');
   if (extras.length) {
