@@ -39,20 +39,22 @@
   }
 
   /* mode tabs */
-  .tabs { display: flex; gap: 8px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+  .tabs { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+  .tabs-left { display: flex; gap: 8px; flex-wrap: wrap; }
   button.tab {
     font-family: inherit;
     font-size: 14px;
     font-weight: 500;
-    padding: 10px 4px 12px;
-    margin-bottom: -1px;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    color: var(--ink-soft);
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--ink);
     cursor: pointer;
+    transition: border-color 0.15s, background 0.15s, color 0.15s;
   }
-  button.tab.active { color: var(--ink); border-bottom-color: var(--accent); }
+  button.tab:hover { border-color: var(--accent); }
+  button.tab.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
   .panel { display: none; }
   .panel.active { display: block; }
 
@@ -130,6 +132,19 @@
     font-weight: 500;
     cursor: pointer;
   }
+  button.primary[disabled] { opacity: 0.7; cursor: default; }
+  .spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(250, 248, 244, 0.35);
+    border-top-color: var(--paper);
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: -1px;
+    animation: spin 0.6s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
   .understood {
     margin-top: 24px;
     padding-top: 20px;
@@ -153,6 +168,19 @@
     border-radius: 12px;
     padding: 18px 20px;
   }
+  .card.closest { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
   .card h3 {
     margin: 0 0 3px;
     font-family: 'Fraunces', serif;
@@ -172,13 +200,28 @@
     color: var(--ink);
     line-height: 1.65;
   }
+  .src-toggle {
+    display: block;
+    margin-top: 12px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+  }
+  .src-toggle:hover { color: var(--ink); }
   .card .src {
+    display: none;
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid var(--line);
     font-size: 11px;
     color: var(--ink-soft);
   }
+  .card .src.visible { display: block; }
   .empty { font-size: 14px; color: var(--ink-soft); }
   footer {
     font-size: 12px;
@@ -195,8 +238,11 @@
 <p class="lede">Tell it what you want, not just who you are. See real Irish paths — degree, apprenticeship, or direct entry — matched to your actual goal.</p>
 
 <div class="tabs">
-  <button class="tab" id="tabWizard">Not sure yet — walk me through it</button>
-  <button class="tab" id="tabChat">I know what I want — just tell me</button>
+  <div class="tabs-left">
+    <button class="tab" id="tabWizard">Not sure yet — walk me through it</button>
+    <button class="tab" id="tabChat">I know what I want — just tell me</button>
+  </div>
+  <button class="link-btn" id="globalReset">Start over</button>
 </div>
 
 <div class="panel" id="panelWizard">
@@ -250,6 +296,16 @@ function setMode(mode) {
 }
 document.getElementById('tabWizard').addEventListener('click', () => setMode('wizard'));
 document.getElementById('tabChat').addEventListener('click', () => setMode('chat'));
+
+document.getElementById('globalReset').addEventListener('click', () => {
+  Object.keys(state).forEach(k => delete state[k]);
+  wizardIndex = 0;
+  document.getElementById('chatInput').value = '';
+  document.getElementById('understood').style.display = 'none';
+  renderWizardStep();
+  setMode('wizard');
+  render();
+});
 
 // ---------- wizard ----------
 function renderProgress() {
@@ -361,13 +417,24 @@ function parseText(text) {
 document.getElementById('chatSubmit').addEventListener('click', () => {
   const text = document.getElementById('chatInput').value.trim();
   if (!text) return;
-  const { result, extras } = parseText(text);
 
-  STEPS.forEach(s => delete state[s.key]);
-  Object.assign(state, result);
+  const btn = document.getElementById('chatSubmit');
+  const originalLabel = 'Find matches';
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Finding matches…';
 
-  renderUnderstood(extras);
-  render();
+  setTimeout(() => {
+    const { result, extras } = parseText(text);
+
+    STEPS.forEach(s => delete state[s.key]);
+    Object.assign(state, result);
+
+    renderUnderstood(extras);
+    render();
+
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+  }, 500);
 });
 
 function renderUnderstood(extras) {
@@ -418,7 +485,7 @@ function render() {
     if (career.requiresCollege !== state.college) return;
     career.branches.forEach(branch => {
       if (branchMatches(branch.conditions)) {
-        matches.push({ title: career.title, ...branch });
+        matches.push({ title: career.title, ...branch, score: Object.keys(branch.conditions).length });
       }
     });
   });
@@ -428,14 +495,31 @@ function render() {
     return;
   }
 
-  out.innerHTML = matches.map(m => `
-    <div class="card">
+  // more matched conditions = a more specific fit to your actual answers, not just a blanket match
+  matches.sort((a, b) => b.score - a.score);
+  const hasClearLeader = matches.length > 1 && matches[0].score > matches[1].score;
+
+  out.innerHTML = matches.map((m, i) => {
+    const isClosest = hasClearLeader && i === 0;
+    return `
+    <div class="card${isClosest ? ' closest' : ''}">
+      ${isClosest ? '<span class="badge">Closest match</span>' : ''}
       <h3>${m.title}</h3>
       <p class="sub">${m.summary}</p>
       <ul>${m.facts.map(f => '<li>' + f + '</li>').join('')}</ul>
-      <p class="src">Sources: ${m.sources.join(', ')} — verified ${m.verifiedDate}</p>
+      <button class="src-toggle" data-idx="${i}">Show sources</button>
+      <p class="src" id="src-${i}">Sources: ${m.sources.join(', ')} — verified ${m.verifiedDate}</p>
     </div>
-  `).join('');
+  `;
+  }).join('');
+
+  out.querySelectorAll('.src-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const src = document.getElementById('src-' + btn.dataset.idx);
+      const visible = src.classList.toggle('visible');
+      btn.textContent = visible ? 'Hide sources' : 'Show sources';
+    });
+  });
 }
 </script>
 </body>
