@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Endpoint, prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c2b26;
+    --ink-soft: #4a5b54;
+    --paper: #faf8f4;
+    --card: #ffffff;
+    --line: #dfe2d8;
+    --accent: #b5651d;
+    --accent-soft: #f0e2d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+  p.lede {
+    color: var(--ink-soft);
+    font-size: 15px;
+    margin: 0 0 28px;
+    line-height: 1.5;
+  }
+
+  /* mode tabs */
+  .tabs { display: flex; gap: 8px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+  button.tab {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 4px 12px;
+    margin-bottom: -1px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  button.tab.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .row { margin: 22px 0; }
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    letter-spacing: 0.01em;
+  }
+  .opts { display: flex; gap: 8px; flex-wrap: wrap; }
+  button.opt {
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  button.opt:hover { border-color: var(--accent); }
+  button.opt.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  /* wizard */
+  .progress { display: flex; gap: 6px; margin-bottom: 22px; }
+  .progress .dot { width: 22px; height: 4px; border-radius: 2px; background: var(--line); }
+  .progress .dot.done { background: var(--accent); }
+  .progress .dot.current { background: var(--ink); }
+  .wizard-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .wizard-card label { font-size: 15px; color: var(--ink); margin-bottom: 14px; }
+  .optional-tag { font-size: 11px; color: var(--ink-soft); font-weight: 400; }
+  .wizard-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; }
+  .link-btn {
+    background: none; border: none; font-family: inherit; font-size: 13px;
+    color: var(--ink-soft); cursor: pointer; text-decoration: underline; padding: 4px 0;
+  }
+  .link-btn:hover { color: var(--ink); }
+
+  /* chat */
+  textarea#chatInput {
+    width: 100%;
+    min-height: 90px;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--card);
+    resize: vertical;
+  }
+  textarea#chatInput:focus { outline: none; border-color: var(--accent); }
+  button.primary {
+    margin-top: 10px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .understood {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .understood > p { font-size: 13px; color: var(--ink-soft); margin: 0 0 14px; }
+  .note {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 10px 12px;
+    line-height: 1.5;
+  }
+
+  #results { margin-top: 40px; display: flex; flex-direction: column; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .card h3 {
+    margin: 0 0 3px;
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .card p.sub {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .card ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  .card .src {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    font-size: 11px;
+    color: var(--ink-soft);
+  }
+  .empty { font-size: 14px; color: var(--ink-soft); }
+  footer {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<h1>Endpoint</h1>
+<p class="lede">Tell it what you want, not just who you are. See real Irish paths — degree, apprenticeship, or direct entry — matched to your actual goal.</p>
+
+<div class="tabs">
+  <button class="tab" id="tabWizard">Not sure yet — walk me through it</button>
+  <button class="tab" id="tabChat">I know what I want — just tell me</button>
+</div>
+
+<div class="panel" id="panelWizard">
+  <div class="progress" id="progress"></div>
+  <div class="wizard-card" id="wizardCard"></div>
+</div>
+
+<div class="panel" id="panelChat">
+  <textarea id="chatInput" placeholder="e.g. I wanna make 60k from graduation, go to college in Ireland, do something in business, and I can move away for college"></textarea>
+  <br>
+  <button class="primary" id="chatSubmit">Find matches</button>
+  <div class="understood" id="understood" style="display:none;">
+    <p>Here's what I picked up — click anything to correct it:</p>
+    <div id="understoodRows"></div>
+    <div class="note" id="chatNote" style="display:none;"></div>
+  </div>
+</div>
+
+<div id="results"></div>
+
+<footer>
+  Prototype dataset, 11 careers researched by hand with sources. This is a starting point for research, not a final answer — always verify current points and requirements with a guidance counsellor before deciding anything.
+</footer>
+
+<script>
+const state = {};
+
+const STEPS = [
+  { key: 'college', label: 'Do you want to go to college?', opts: [['Yes', true], ['No', false]] },
+  { key: 'openToMoving', label: 'Willing to move abroad?', opts: [['Open to it', true], ['Stay in Ireland', false]] },
+  { key: 'likesMaths', label: 'Do you like maths?', opts: [['Yes', true], ['Not really', false]] },
+  { key: 'highPointsLikely', label: 'Realistically expecting high CAO points (500+)?', opts: [['Likely', true], ['Not sure / no', false]] },
+  { key: 'subjectFocus', label: 'Only if teaching interests you: primary or post-primary?', opts: [['Primary', 'primary'], ['Post-primary', 'post-primary']], optional: true },
+];
+
+let wizardIndex = 0;
+
+fetch('data/careers.json').then(r => r.json()).then(data => {
+  window.careers = data.careers;
+  render();
+}).catch(() => {
+  document.getElementById('results').innerHTML = '<p class="empty" style="color:#b5651d;">Could not load data/careers.json — run this with a local server, not by double-clicking the file. Try: <code>python3 -m http.server</code>, then open localhost:8000</p>';
+});
+
+// ---------- mode tabs ----------
+function setMode(mode) {
+  document.getElementById('tabWizard').classList.toggle('active', mode === 'wizard');
+  document.getElementById('tabChat').classList.toggle('active', mode === 'chat');
+  document.getElementById('panelWizard').classList.toggle('active', mode === 'wizard');
+  document.getElementById('panelChat').classList.toggle('active', mode === 'chat');
+}
+document.getElementById('tabWizard').addEventListener('click', () => setMode('wizard'));
+document.getElementById('tabChat').addEventListener('click', () => setMode('chat'));
+
+// ---------- wizard ----------
+function renderProgress() {
+  const el = document.getElementById('progress');
+  el.innerHTML = STEPS.map((s, i) => {
+    let cls = 'dot';
+    if (i < wizardIndex) cls += ' done';
+    if (i === wizardIndex) cls += ' current';
+    return `<div class="${cls}"></div>`;
+  }).join('');
+}
+
+function renderWizardStep() {
+  renderProgress();
+  const card = document.getElementById('wizardCard');
+  if (wizardIndex >= STEPS.length) {
+    card.innerHTML = `
+      <label>That's everything — your matches are below.</label>
+      <div class="wizard-nav">
+        <button class="link-btn" id="wizBack">Back</button>
+        <button class="link-btn" id="wizRestart">Start over</button>
+      </div>`;
+    document.getElementById('wizBack').addEventListener('click', () => { wizardIndex--; renderWizardStep(); });
+    document.getElementById('wizRestart').addEventListener('click', restartWizard);
+    return;
+  }
+
+  const step = STEPS[wizardIndex];
+  const tag = step.optional ? ' <span class="optional-tag">(optional — skip if it doesn\'t apply)</span>' : '';
+  card.innerHTML = `
+    <label>${step.label}${tag}</label>
+    <div class="opts">
+      ${step.opts.map(([text, val]) => `<button class="opt${state[step.key] === val ? ' active' : ''}" data-val="${val}">${text}</button>`).join('')}
+    </div>
+    <div class="wizard-nav">
+      <button class="link-btn" id="wizBack" ${wizardIndex === 0 ? 'style="visibility:hidden"' : ''}>Back</button>
+      <button class="link-btn" id="wizSkip">${step.optional ? 'Skip' : 'Skip for now'}</button>
+    </div>`;
+
+  card.querySelectorAll('button.opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const raw = btn.dataset.val;
+      state[step.key] = raw === 'true' ? true : (raw === 'false' ? false : raw);
+      wizardIndex++;
+      renderWizardStep();
+      render();
+    });
+  });
+  document.getElementById('wizBack').addEventListener('click', () => { wizardIndex--; renderWizardStep(); });
+  document.getElementById('wizSkip').addEventListener('click', () => { wizardIndex++; renderWizardStep(); render(); });
+}
+
+function restartWizard() {
+  STEPS.forEach(s => delete state[s.key]);
+  wizardIndex = 0;
+  renderWizardStep();
+  render();
+}
+
+renderWizardStep();
+setMode('wizard');
+
+// ---------- chat ----------
+function parseText(text) {
+  const lower = text.toLowerCase();
+  const result = {};
+
+  if (/\bno college\b|\bapprenticeship\b|\bwithout college\b|\bskip college\b|\btrade\b/.test(lower)) {
+    result.college = false;
+  } else if (/\bcollege\b|\buniversity\b|\bdegree\b|\buni\b/.test(lower)) {
+    result.college = true;
+  }
+
+  if (/\bstay in ireland\b|\bdon.?t want to move\b|\bnot move\b|\bstay home\b/.test(lower)) {
+    result.openToMoving = false;
+  } else if (/\bmove abroad\b|\bmove away\b|\babroad\b|\bopen to moving\b|\bcan move\b|\bwilling to move\b/.test(lower)) {
+    result.openToMoving = true;
+  }
+
+  if (/\b(hate|bad at|not good at|dislike)\s+maths?\b/.test(lower)) {
+    result.likesMaths = false;
+  } else if (/\bmaths?\b/.test(lower)) {
+    result.likesMaths = true;
+  }
+
+  if (/\bhigh points\b|\b5\d{2}\+?\s*points\b|\btop grades\b/.test(lower)) {
+    result.highPointsLikely = true;
+  } else if (/\blow points\b|\bnot expecting high points\b/.test(lower)) {
+    result.highPointsLikely = false;
+  }
+
+  if (/primary school teach|teach.*primary/.test(lower)) {
+    result.subjectFocus = 'primary';
+  } else if (/post-?primary|secondary school teach|teach.*secondary/.test(lower)) {
+    result.subjectFocus = 'post-primary';
+  }
+
+  // signals we notice but can't actually filter on yet — shown back for honesty
+  const extras = [];
+  const salaryMatch = lower.match(/(\d{2,3})\s*k\b/);
+  if (salaryMatch) extras.push(`a target salary around €${salaryMatch[1]}k`);
+  const fields = ['business', 'tech', 'software', 'nursing', 'teaching', 'law', 'engineering', 'finance', 'trades', 'hair', 'medicine', 'accounting'];
+  const foundField = fields.find(f => lower.includes(f));
+  if (foundField) extras.push(`an interest in ${foundField}`);
+
+  return { result, extras };
+}
+
+document.getElementById('chatSubmit').addEventListener('click', () => {
+  const text = document.getElementById('chatInput').value.trim();
+  if (!text) return;
+  const { result, extras } = parseText(text);
+
+  STEPS.forEach(s => delete state[s.key]);
+  Object.assign(state, result);
+
+  renderUnderstood(extras);
+  render();
+});
+
+function renderUnderstood(extras) {
+  const wrap = document.getElementById('understood');
+  const rows = document.getElementById('understoodRows');
+  wrap.style.display = 'block';
+
+  rows.innerHTML = STEPS.map(step => `
+    <div class="row">
+      <label>${step.label}</label>
+      <div class="opts">
+        ${step.opts.map(([text, val]) => `<button class="opt${state[step.key] === val ? ' active' : ''}" data-key="${step.key}" data-val="${val}">${text}</button>`).join('')}
+      </div>
+    </div>
+  `).join('');
+
+  rows.querySelectorAll('button.opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const raw = btn.dataset.val;
+      const key = btn.dataset.key;
+      state[key] = raw === 'true' ? true : (raw === 'false' ? false : raw);
+      rows.querySelectorAll(`button.opt[data-key="${key}"]`).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    });
+  });
+
+  const noteEl = document.getElementById('chatNote');
+  if (extras.length) {
+    noteEl.style.display = 'block';
+    noteEl.textContent = `Also noticed ${extras.join(' and ')} — this prototype can't filter on that yet, so it's not affecting the matches below.`;
+  } else {
+    noteEl.style.display = 'none';
+  }
+}
+
+// ---------- matching + results (shared by both modes) ----------
+function branchMatches(conditions) {
+  return Object.entries(conditions).every(([k, v]) => state[k] === v);
+}
+
+function render() {
+  const out = document.getElementById('results');
+  if (!window.careers || state.college === undefined) { out.innerHTML = ''; return; }
+
+  let matches = [];
+  window.careers.forEach(career => {
+    if (career.requiresCollege !== state.college) return;
+    career.branches.forEach(branch => {
+      if (branchMatches(branch.conditions)) {
+        matches.push({ title: career.title, ...branch });
+      }
+    });
+  });
+
+  if (matches.length === 0) {
+    out.innerHTML = '<p class="empty">Answer a few more questions to see matches.</p>';
+    return;
+  }
+
+  out.innerHTML = matches.map(m => `
+    <div class="card">
+      <h3>${m.title}</h3>
+      <p class="sub">${m.summary}</p>
+      <ul>${m.facts.map(f => '<li>' + f + '</li>').join('')}</ul>
+      <p class="src">Sources: ${m.sources.join(', ')} — verified ${m.verifiedDate}</p>
+    </div>
+  `).join('');
+}
+</script>
+</body>
+</html>

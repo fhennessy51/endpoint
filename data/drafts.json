@@ -1,0 +1,128 @@
+{
+  "careers": [
+    {
+      "id": "paramedic",
+      "title": "Paramedic",
+      "requiresCollege": true,
+      "reviewed": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "BSc Paramedic Studies route",
+          "facts": [
+            "Direct CAO entry to programmes like BSc Paramedic Studies at UL or UCC",
+            "Typical entry needs 6 Leaving Cert subjects including Maths, English, and Irish or another language, plus a Lab Science subject (Biology, Physics, Chemistry, Physics & Chemistry, or Agricultural Science) at O6/H7 — some programmes ask H4 in the lab science and H5 in one other subject",
+            "Year 1 of most programmes covers the curriculum for PHECC's National Qualification in Emergency Medical Technology (NQEMT); registering with PHECC (Pre-Hospital Emergency Care Council) is required to practise",
+            "CAO points weren't independently confirmed in this draft — verify the current points requirement at cao.ie",
+            "NEEDS VERIFICATION: starting HSE paramedic salary not independently sourced for this draft — check hse.ie pay scales before using a figure"
+          ],
+          "sources": ["qualifax.ie/course/94127", "ul.ie BSc Paramedic Studies course page", "phecc.ie/register"],
+          "verifiedDate": "2026-08 (points and salary unverified, flagged for review)"
+        }
+      ]
+    },
+    {
+      "id": "quantity-surveyor",
+      "title": "Quantity surveyor",
+      "requiresCollege": true,
+      "reviewed": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "Level 8 Quantity Surveying degree route",
+          "facts": [
+            "Direct CAO entry, e.g. TU837 Quantity Surveying & Construction Economics at TU Dublin",
+            "Typical entry needs 6 subjects at O6/H7, 4 of those at H5, with Maths and English (or Irish) at O6/H7; a QQI-FET applicant route also exists, capped at 390 points",
+            "Real starting pay: roughly 35,000-45,000 euro entry-level, rising toward 70,000 euro within 5-8 years, with average around 59,000 euro overall",
+            "Senior QS pay in Dublin reported around 75,000-95,000 euro, somewhat lower outside Dublin",
+            "CAO points vary by year and college — verify the current figure at cao.ie before advising a student"
+          ],
+          "sources": ["tudublin.ie TU837 course page", "worldsalaries.com quantity surveyor salary Ireland 2026", "roryconnollyqs.ie quantity surveyor salary factors"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "physiotherapist",
+      "title": "Physiotherapist",
+      "requiresCollege": true,
+      "reviewed": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "BSc Physiotherapy route",
+          "facts": [
+            "Direct CAO entry to BSc Physiotherapy, e.g. DN420 at UCD",
+            "Highly competitive course; exact current CAO points weren't independently confirmed in this draft — verify at cao.ie",
+            "Real starting pay: entry-level (under 1 year) physiotherapist averages around 34,194 euro total compensation, rising to around 39,624 euro at 1-4 years experience",
+            "Often cited as offering strong salary and job security relative to the points needed to get in, compared to some other CAO courses"
+          ],
+          "sources": ["ucd.ie Physiotherapy graduate/undergraduate entry page", "payscale.com Physiotherapist salary Ireland 2026", "irelandpaycalculator.ie Irish college courses guide 2026"],
+          "verifiedDate": "2026-08 (exact points unverified, flagged for review)"
+        }
+      ]
+    },
+    {
+      "id": "plumbing-apprenticeship",
+      "title": "Plumbing apprenticeship",
+      "requiresCollege": false,
+      "reviewed": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "SOLAS-registered plumbing apprenticeship",
+          "facts": [
+            "No CAO points needed: minimum is Grade D in five Junior Cert subjects (or equivalent), age 16+; employers can set extra requirements, and a preparatory course exists for candidates below the minimum",
+            "Must be hired by a SOLAS-approved employer first, then registered as an apprentice, same as other craft apprenticeships",
+            "7 phases total: 3 off-the-job (in a training centre) and 4 on-the-job (with the employer)",
+            "Apprentice pay rises by phase: roughly 274 euro/week (Phase 2) up to roughly 740 euro/week gross by 4th year"
+          ],
+          "sources": ["careersportal.ie plumbing apprenticeship summary", "qualifax.ie/course/220211", "apprenticeship.ie career-seekers jobs page"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "veterinary-nursing",
+      "title": "Veterinary nursing",
+      "requiresCollege": true,
+      "reviewed": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "BSc Veterinary Nursing route",
+          "facts": [
+            "Direct CAO entry to BSc Veterinary Nursing at colleges including DkIT, TUS, ATU, and UCD",
+            "Typical entry needs 6 subjects, H5 in two of them, O6/H7 in the remaining four including Maths and a language; a lab science subject is also required, at grades that vary slightly by college",
+            "Heavy demand year on year, with CAO points recently in the region of 400-430 — always verify the current figure at cao.ie",
+            "Alternative entry route: a QQI Level 5 award in any discipline can be used to compete for a place instead of Leaving Cert points",
+            "NEEDS VERIFICATION: no independently sourced Republic of Ireland salary figure found for this draft — only Northern Ireland pay data (roughly £14,000-17,000) turned up; check the Veterinary Council of Ireland or current job listings before using a number"
+          ],
+          "sources": ["qualifax.ie/course/36433", "tus.ie Veterinary Nursing BSc course page", "gradireland.com veterinary surgeon/nurse job description"],
+          "verifiedDate": "2026-08 (ROI salary unverified, flagged for review)"
+        }
+      ]
+    },
+    {
+      "id": "pharmacy-technician",
+      "title": "Pharmacy technician",
+      "requiresCollege": false,
+      "reviewed": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "QQI / on-the-job route (not a formal SOLAS apprenticeship)",
+          "facts": [
+            "No SOLAS apprenticeship scheme was found for this role — the real route is QQI-based: a QQI Level 5 Pharmacy Assistant award (or 2+ years full-time pharmacy dispensary experience) as a foundation, then a part-time Pharmacy Technician programme such as TU654 at TU Dublin",
+            "Requires working in a pharmacy for a minimum of 20 hours a week for the duration of the course",
+            "Programme takes roughly 2 years, combining part-time academic study with practical placement",
+            "No CAO points or full-time college attendance needed — it's a trainee/earn-while-you-learn route into the qualification",
+            "Real pay: starting salary around 23,157 euro gross/year, average around 29,914 euro gross/year (about 14.38 euro/hour)"
+          ],
+          "sources": ["tudublin.ie TU654 Pharmacy Technician Studies course page", "healthcarejobs.ie pharmacy technician career guide", "salaryexpert.com pharmacy technician Ireland 2026"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    }
+  ]
+}

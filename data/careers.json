@@ -1,0 +1,267 @@
+{
+  "careers": [
+    {
+      "id": "electrician-apprenticeship",
+      "title": "Electrician apprenticeship",
+      "requiresCollege": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "No college route",
+          "facts": [
+            "No CAO points needed: minimum is Grade D in five Junior Cert subjects, age 16+, plus a colour vision test",
+            "Earn while you learn over 4 years across 7 phases, minimum 208 weeks served",
+            "Apprentice pay starts low (roughly 5-10 euro/hour) and rises as a percentage of the fully qualified rate through the phases",
+            "Ends in a Level 6 Advanced Craft Certificate, recognised nationally and internationally"
+          ],
+          "sources": [
+            "qualifax.ie/course/220217",
+            "careersportal.ie electrical apprenticeship summary",
+            "payscale.com IE apprentice electrician entry-level pay"
+          ],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "actuary",
+      "title": "Actuary",
+      "requiresCollege": true,
+      "branches": [
+        {
+          "conditions": { "likesMaths": true, "highPointsLikely": true },
+          "summary": "Accredited actuarial degree route",
+          "facts": [
+            "Needs high CAO points, accredited courses at UCC/DCU/UCD/QUB give exemptions from professional exams",
+            "Structured, fairly predictable working hours day to day",
+            "But: multi-year professional exam process alongside full-time work after college, with real failure rates, not low-effort"
+          ],
+          "sources": ["society of actuaries in ireland exam structure", "user's own CB2 exemption experience"],
+          "verifiedDate": "2026-08"
+        },
+        {
+          "conditions": { "likesMaths": true, "highPointsLikely": false },
+          "summary": "Alternative quant degree route",
+          "facts": [
+            "Any strong quantitative degree (maths, stats, finance, engineering) can sit the same professional exams",
+            "Without an accredited course, you don't get automatic exemptions, so more exams to sit yourself",
+            "Real, valid path for a student who likes maths but doesn't have 500+ points"
+          ],
+          "sources": ["society of actuaries in ireland exam exemption policy"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "investment-banking",
+      "title": "Investment banking",
+      "requiresCollege": true,
+      "branches": [
+        {
+          "conditions": { "openToMoving": true },
+          "summary": "UK/international target school route (e.g. LSE)",
+          "facts": [
+            "LSE accepts the Irish Leaving Cert directly via a published A-level equivalency table",
+            "Roughly 30,000 applications for about 1,900 undergraduate places recently, under 6 percent acceptance",
+            "Some courses require an admissions test (UGAA) alongside consistently top grades"
+          ],
+          "sources": ["lse.ac.uk/study-at-lse/international-students/ireland", "lse.ac.uk entry-requirements page"],
+          "verifiedDate": "2026-08"
+        },
+        {
+          "conditions": { "openToMoving": false },
+          "summary": "Stay in Ireland route (e.g. Trinity)",
+          "facts": [
+            "Economics, BESS, or Economics and Maths joint degree at Trinity are real feeder courses into Irish/European finance recruiting",
+            "Exact minimum CAO points change every year, always verify live at cao.ie or tcd.ie before advising a student",
+            "If points fall short: a less competitive undergrad followed by a masters conversion in finance is a real, common fallback route"
+          ],
+          "sources": ["tcd.ie CAO minimum entry levels PDF", "tcd.ie Business Economic and Social Studies course page"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "nurse",
+      "title": "Nurse (general)",
+      "requiresCollege": true,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "BSc Nursing route",
+          "facts": [
+            "4-year BSc (Hons) in General Nursing, direct CAO entry, requires a lab science subject (biology, chemistry or physics) at O6/H7",
+            "4th year is a 36-week paid internship with the HSE as part of the degree itself",
+            "Graduates register with NMBI and can work anywhere in Ireland",
+            "Starting HSE salary around 37,788-38,166 euro (Point 1 on the scale), rising through incremental points plus long service increments"
+          ],
+          "sources": ["dkit.ie BSc Hons General Nursing course page", "vizguides.com HSE pay scales 2026"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "garda",
+      "title": "Garda (police)",
+      "requiresCollege": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "Direct entry via An Garda Siochana recruitment",
+          "facts": [
+            "No CAO points needed: minimum is a Leaving Cert with grade D3 in five subjects at Ordinary Level, or an equivalent Level 5 QQI award",
+            "Must be 18 to 50 at application, pass aptitude tests, an interview, and a physical competency test",
+            "36 weeks training at Garda College Templemore, paid a 354 euro/week training allowance, accommodation and food provided",
+            "Includes a Level 7 BA in Applied Policing (accredited by University of Limerick) as part of training",
+            "Starting salary on attestation is 39,194 euro, rising to 60,333 euro after 8 years"
+          ],
+          "sources": ["gardaip.com 2026 recruitment guide", "publicjobs.ie garda trainee page", "careerservices.ie garda entry requirements"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "hairdressing-apprenticeship",
+      "title": "Hairdressing apprenticeship",
+      "requiresCollege": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "National Hairdressing Apprenticeship",
+          "facts": [
+            "Must be hired by a SOLAS-approved salon first, then registered as an apprentice",
+            "3-year programme, 80 percent on-the-job in the salon, 20 percent off-the-job in a training centre one day a week",
+            "Ends in a QQI Level 6 qualification, nationally recognised",
+            "No CAO points needed; entry is usually a Level 4 award or two years of salon experience"
+          ],
+          "sources": ["hairdressingapprenticeship.ie FAQs", "kerrycollege.ie hairdressing apprenticeship page"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "software-developer-degree",
+      "title": "Software developer, degree route",
+      "requiresCollege": true,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "Computer Science / Software Development degree",
+          "facts": [
+            "CAO points vary a lot by course and college, roughly 300-500+, always check the specific course at cao.ie",
+            "Most computing courses want or require Higher Level Maths",
+            "Real salary data example (UCC): mid-level developer 50,000-65,000 euro, senior 80,000-110,000 euro"
+          ],
+          "sources": ["ucc.ie CK401 Computer Science course page"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "software-developer-apprenticeship",
+      "title": "Software developer, apprenticeship route",
+      "requiresCollege": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "FIT ICT Associate Apprenticeship, Software Development",
+          "facts": [
+            "No CAO points needed: 5+ Leaving Cert subjects at O6/H7 including Maths and English, plus an aptitude test",
+            "2-year, earn-while-you-learn apprenticeship placed inside real tech companies, coordinated by FIT",
+            "Paid roughly 312 euro/week in year one, rising to 408 euro/week in year two",
+            "Graduates can often get advanced entry into year two of a related degree afterward if they choose"
+          ],
+          "sources": ["fit.ie ICT Associate Apprenticeship, Software Developer page", "kerrycollege.ie software developer apprenticeship page"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "business-marketing",
+      "title": "Business or marketing",
+      "requiresCollege": true,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "General business/marketing degree",
+          "facts": [
+            "Offered at almost every Irish university and Technological University",
+            "A common, flexible degree that doesn't lock you into one narrow career",
+            "NEEDS VERIFICATION: exact CAO points range not independently sourced for this entry, cross-check at cao.ie before showing to a real student"
+          ],
+          "sources": ["general knowledge, not independently verified against a live source"],
+          "verifiedDate": "2026-08 (unverified points, flagged for review)"
+        }
+      ]
+    },
+    {
+      "id": "chef-apprenticeship",
+      "title": "Chef apprenticeship (commis chef)",
+      "requiresCollege": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "National Commis Chef Apprenticeship",
+          "facts": [
+            "Must be hired by a SOLAS-approved hotel or restaurant kitchen first, then registered as an apprentice",
+            "2-year programme, roughly 3-4 days a week on-the-job, 1-2 days off-the-job at a training centre",
+            "Minimum entry: Level 4 award including a D in Junior Cert Maths, open from age 16",
+            "Ends in a QQI Level 6 Advanced Certificate in Culinary Arts",
+            "Real average chef salary in Ireland: entry-level around 34,500 euro, rising to 47,000+ euro with experience"
+          ],
+          "sources": ["commischefapprenticeship.ie", "kerrycollege.ie commis chef apprenticeship page", "salaryexpert.com chef salary Ireland 2026"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "accounting-technician-apprenticeship",
+      "title": "Accounting technician apprenticeship",
+      "requiresCollege": false,
+      "branches": [
+        {
+          "conditions": {},
+          "summary": "Accounting Technicians Ireland apprenticeship",
+          "facts": [
+            "Needs 300 CAO points (or equivalent) with a pass in English and Maths or Accounting, though a PLC can substitute for the points requirement",
+            "2-year, earn-while-you-learn programme, 4 days a week with an employer, 1 day a week at a partner college",
+            "Real starting pay reported in the range of roughly 21,000-27,600 euro a year depending on employer",
+            "Ends in a QQI Level 6 Advanced Certificate in Accounting and ATI membership, with a real progression path to a Level 8 Accounting Technologist degree or full chartered accountancy afterward"
+          ],
+          "sources": ["accountingtechniciansireland.ie apprenticeship page", "dunboynecollege.ie accounting technician apprenticeship page", "gretb.ie accounting technician page"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "teacher",
+      "title": "Teacher",
+      "requiresCollege": true,
+      "branches": [
+        {
+          "conditions": { "subjectFocus": "primary" },
+          "summary": "Primary teaching route",
+          "facts": [
+            "4-year B.Ed direct entry, or any Level 8 degree followed by a 2-year PME (Professional Master of Education)",
+            "Requires H4 or higher in Higher Level Irish at Leaving Cert",
+            "If you don't have that: an alternative route via 65%+ on the TEG B1 Irish oral exam",
+            "If points fall short for direct entry: a Higher Education Links Programme (PLC feeding into a degree at reduced points) is the honest fallback, not a direct PLC-to-teaching path"
+          ],
+          "sources": ["teachingcouncil.ie how-to-become-a-teacher/primary", "mic.ul.ie PME entry requirements"],
+          "verifiedDate": "2026-08"
+        },
+        {
+          "conditions": { "subjectFocus": "post-primary" },
+          "summary": "Post-primary teaching route",
+          "facts": [
+            "Level 8 degree in the actual subject you want to teach, followed by a 2-year PME in that subject",
+            "No Irish language requirement, unless you want to teach Irish itself",
+            "Minimum 2.2 honours degree required for PME entry"
+          ],
+          "sources": ["teachingcouncil.ie how-to-become-a-teacher/post-primary", "tcd.ie PME course page"],
+          "verifiedDate": "2026-08"
+        }
+      ]
+    }
+  ]
+}
