@@ -223,6 +223,17 @@
   }
   .card .src.visible { display: block; }
   .empty { font-size: 14px; color: var(--ink-soft); }
+  .disclaimer {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .disclaimer strong { color: var(--accent); }
   footer {
     font-size: 12px;
     color: var(--ink-soft);
@@ -236,6 +247,10 @@
 <body>
 <h1>Endpoint</h1>
 <p class="lede">Tell it what you want, not just who you are. See real Irish paths — degree, apprenticeship, or direct entry — matched to your actual goal.</p>
+
+<div class="disclaimer">
+  <strong>Unverified prototype.</strong> This is a student-built research tool, not reviewed or endorsed by a career guidance professional. Facts, points requirements, and salary figures may be outdated or incomplete — always confirm anything here with a guidance counsellor and official sources (cao.ie, qualifax.ie) before making any decision.
+</div>
 
 <div class="tabs">
   <div class="tabs-left">
@@ -263,7 +278,7 @@
 <div id="results"></div>
 
 <footer>
-  Prototype dataset, 11 careers researched by hand with sources. This is a starting point for research, not a final answer — always verify current points and requirements with a guidance counsellor before deciding anything.
+  Prototype dataset, 11 careers researched by hand with sources, not yet reviewed by a career guidance professional. This is a starting point for research, not a final answer or official advice — always verify current points, entry requirements and pay figures with a guidance counsellor and official sources (cao.ie, qualifax.ie) before making any decision.
 </footer>
 
 <script>
