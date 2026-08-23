@@ -35,16 +35,16 @@
           "conditions": {},
           "summary": "Level 8 Quantity Surveying degree route",
           "facts": [
-            "Direct CAO entry, e.g. TU837 Quantity Surveying & Construction Economics at TU Dublin",
+            "Direct CAO entry \u2014 offered well beyond TU Dublin (TU837): also at TUS (Limerick and Athlone campuses), Atlantic TU Sligo, and SETU (Carlow and Waterford)",
             "Typical entry needs 6 subjects at O6/H7, 4 of those at H5, with Maths and English (or Irish) at O6/H7; a QQI-FET applicant route also exists, capped at 390 points",
-            "Real starting pay: roughly 35,000-45,000 euro entry-level, rising toward 70,000 euro within 5-8 years, with average around 59,000 euro overall",
-            "Senior QS pay in Dublin reported around 75,000-95,000 euro, somewhat lower outside Dublin",
+            "Real starting pay: roughly 35,000-45,000 euro entry-level, rising toward 70,000 euro within 5-8 years",
+            "Morgan McKinley's 2026 Ireland Salary Guide puts the average Quantity Surveyor salary at 50,000-75,000 euro, broadly consistent with the entry-level/senior range above",
             "CAO points vary by year and college \u2014 verify the current figure at cao.ie before advising a student"
           ],
           "sources": [
+            "https://www.morganmckinley.com/ie/salary-guide/data/quantity-surveyor/ireland",
             "https://www.tudublin.ie/study/undergraduate/courses/quantity-surveying-and-construction-econ-tu837/",
-            "https://worldsalaries.com/average-quantity-surveyor-salary-in-ireland/",
-            "https://www.roryconnollyqs.ie/single-post/understanding-the-different-factors-that-influence-quantity-surveyor-salaries-in-ireland"
+            "https://tus.ie/courses/us881/"
           ],
           "verifiedDate": "2026-08"
         }
@@ -133,7 +133,8 @@
           "conditions": {},
           "summary": "QQI / on-the-job route (not a formal SOLAS apprenticeship)",
           "facts": [
-            "No SOLAS apprenticeship scheme was found for this role \u2014 the real route is QQI-based: a QQI Level 5 Pharmacy Assistant award (or 2+ years full-time pharmacy dispensary experience) as a foundation, then a part-time Pharmacy Technician programme such as TU654 at TU Dublin",
+            "No SOLAS apprenticeship scheme was found for this role \u2014 the real route is QQI-based: a QQI Level 5 Pharmacy Assistant award (or 2+ years full-time pharmacy dispensary experience) as a foundation, then a Pharmacy Technician Studies programme",
+            "Offered at several colleges, not just TU Dublin (TU654): also SETU Carlow (Higher Cert), TUS Athlone, ATU Letterkenny, and MTU Tralee",
             "Requires working in a pharmacy for a minimum of 20 hours a week for the duration of the course",
             "Programme takes roughly 2 years, combining part-time academic study with practical placement",
             "No CAO points or full-time college attendance needed \u2014 it's a trainee/earn-while-you-learn route into the qualification",
@@ -141,7 +142,7 @@
           ],
           "sources": [
             "https://www.tudublin.ie/study/undergraduate/courses/pharmacy-technician-studies-tu654/",
-            "https://www.healthcarejobs.ie/blog/career-pathways/pharmacy-technician-career-guide-how-become-pharmacy-technician-ireland",
+            "https://www.setu.ie/courses/bachelor-of-science-in-pharmacy-technician-studies",
             "https://www.salaryexpert.com/salary/job/pharmacy-technician/ireland"
           ],
           "verifiedDate": "2026-08"
@@ -182,15 +183,16 @@
           "conditions": {},
           "summary": "Prescribed Architecture degree route",
           "facts": [
-            "Only three prescribed routes in Ireland: UCD, TU Dublin (TU832), and the joint UCC/MTU programme",
+            "Only three prescribed routes in Ireland: UCD, TU Dublin (TU832), and the joint UCC/MTU programme \u2014 this is a genuine regulatory limit (RIAI-prescribed), not a lack of other options",
             "CAO points can include up to 25 bonus points for Higher Level Maths; TU Dublin's course additionally requires a portfolio and interview, worth up to 200 points combined on top of the CAO score",
-            "Real starting pay: around 33,917-35,500 euro gross for a graduate architect, rising to roughly 45,000-55,000 euro on average with experience",
+            "Real starting pay: around 33,917-35,500 euro gross for a graduate architect",
+            "Morgan McKinley's 2026 Ireland Salary Guide puts the average Architect salary at 45,000-55,000 euro, consistent with other sources",
             "Registration with the RIAI (Royal Institute of the Architects of Ireland) is the recognised path to practising as a qualified architect after the degree and further experience"
           ],
           "sources": [
             "https://www.riai.ie/careers-in-architecture/how-to-become-an-architect",
-            "https://www.tudublin.ie/study/undergraduate/courses/architecture-tu832/",
-            "https://www.jobted.ie/salary/architect"
+            "https://www.morganmckinley.com/ie/salary-guide/data/architect/ireland",
+            "https://www.tudublin.ie/study/undergraduate/courses/architecture-tu832/"
           ],
           "verifiedDate": "2026-08"
         }
@@ -209,12 +211,13 @@
             "No specific subject prerequisites for a law degree via the CAO, but qualifying as a solicitor afterward requires passing the Law Society's FE-1 entrance exam",
             "After the FE-1, you need a two-year training contract with an eligible solicitor, plus the Professional Practice Course (PPC I, roughly 7 months)",
             "If your degree isn't a recognised Irish/UK law degree (or isn't Level 7+), a preliminary exam or exemption process applies before sitting the FE-1",
-            "Real pay: average trainee solicitor salary reported around 30,000 euro, with a wide range (roughly 18,000-51,000 euro) depending on the firm",
+            "Real starting pay as a trainee solicitor: average around 30,000 euro, ranging roughly 18,000-51,000 euro depending on the firm",
+            "IMPORTANT DISTINCTION: Morgan McKinley's 2026 Ireland Salary Guide puts the average Solicitor salary at 90,000-110,000 euro \u2014 but that figure is for established/qualified solicitors, not trainees straight out of college. Don't present it as a starting salary.",
             "CAO points for individual law degree courses weren't independently confirmed in this draft \u2014 verify at cao.ie, as they vary a lot by college"
           ],
           "sources": [
             "https://www.lawsociety.ie/becoming-a-solicitor/not-a-student-or-graduate/",
-            "https://www.ucc.ie/en/law/careers/how-to-become-a-solicitor-in-ireland/",
+            "https://www.morganmckinley.com/ie/salary-guide/data/solicitor/ireland",
             "https://www.payscale.com/research/IE/Job=Trainee_Solicitor/Salary/f6723f18/Entry-Level-Legal-Research"
           ],
           "verifiedDate": "2026-08 (law degree CAO points unverified, flagged for review)"
@@ -383,6 +386,7 @@
           "facts": [
             "No CAO points needed: minimum is Grade D (or 'Achieved') in five Junior Cert subjects, age 16+; a pre-apprenticeship course or 3 years of relevant work experience over age 16 can substitute",
             "May be required to pass the Ishihara Colour Vision Test",
+            "Delivered through SOLAS training centres nationwide (TU Dublin is one example, not the only provider) \u2014 you train with whichever approved centre your employer is linked to",
             "Must be hired by a SOLAS-approved employer first, then registered as an apprentice",
             "Pay has two parts: a training allowance during off-the-job training, and an apprentice rate during on-the-job phases \u2014 exact current euro figures weren't independently confirmed in this draft"
           ],
