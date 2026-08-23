@@ -11,12 +11,16 @@
           "summary": "BSc Paramedic Studies route",
           "facts": [
             "Direct CAO entry to programmes like BSc Paramedic Studies at UL or UCC",
-            "Typical entry needs 6 Leaving Cert subjects including Maths, English, and Irish or another language, plus a Lab Science subject (Biology, Physics, Chemistry, Physics & Chemistry, or Agricultural Science) at O6/H7 — some programmes ask H4 in the lab science and H5 in one other subject",
+            "Typical entry needs 6 Leaving Cert subjects including Maths, English, and Irish or another language, plus a Lab Science subject (Biology, Physics, Chemistry, Physics & Chemistry, or Agricultural Science) at O6/H7 \u2014 some programmes ask H4 in the lab science and H5 in one other subject",
             "Year 1 of most programmes covers the curriculum for PHECC's National Qualification in Emergency Medical Technology (NQEMT); registering with PHECC (Pre-Hospital Emergency Care Council) is required to practise",
-            "CAO points weren't independently confirmed in this draft — verify the current points requirement at cao.ie",
-            "NEEDS VERIFICATION: starting HSE paramedic salary not independently sourced for this draft — check hse.ie pay scales before using a figure"
+            "CAO points weren't independently confirmed in this draft \u2014 verify the current points requirement at cao.ie",
+            "NEEDS VERIFICATION: starting HSE paramedic salary not independently sourced for this draft \u2014 check hse.ie pay scales before using a figure"
           ],
-          "sources": ["qualifax.ie/course/94127", "ul.ie BSc Paramedic Studies course page", "phecc.ie/register"],
+          "sources": [
+            "https://www.qualifax.ie/course/94127",
+            "https://www.ul.ie/courses/bachelor-science-paramedic-studies",
+            "https://phecc.ie/register/"
+          ],
           "verifiedDate": "2026-08 (points and salary unverified, flagged for review)"
         }
       ]
@@ -35,9 +39,13 @@
             "Typical entry needs 6 subjects at O6/H7, 4 of those at H5, with Maths and English (or Irish) at O6/H7; a QQI-FET applicant route also exists, capped at 390 points",
             "Real starting pay: roughly 35,000-45,000 euro entry-level, rising toward 70,000 euro within 5-8 years, with average around 59,000 euro overall",
             "Senior QS pay in Dublin reported around 75,000-95,000 euro, somewhat lower outside Dublin",
-            "CAO points vary by year and college — verify the current figure at cao.ie before advising a student"
+            "CAO points vary by year and college \u2014 verify the current figure at cao.ie before advising a student"
           ],
-          "sources": ["tudublin.ie TU837 course page", "worldsalaries.com quantity surveyor salary Ireland 2026", "roryconnollyqs.ie quantity surveyor salary factors"],
+          "sources": [
+            "https://www.tudublin.ie/study/undergraduate/courses/quantity-surveying-and-construction-econ-tu837/",
+            "https://worldsalaries.com/average-quantity-surveyor-salary-in-ireland/",
+            "https://www.roryconnollyqs.ie/single-post/understanding-the-different-factors-that-influence-quantity-surveyor-salaries-in-ireland"
+          ],
           "verifiedDate": "2026-08"
         }
       ]
@@ -53,11 +61,15 @@
           "summary": "BSc Physiotherapy route",
           "facts": [
             "Direct CAO entry to BSc Physiotherapy, e.g. DN420 at UCD",
-            "Highly competitive course; exact current CAO points weren't independently confirmed in this draft — verify at cao.ie",
+            "Highly competitive course; exact current CAO points weren't independently confirmed in this draft \u2014 verify at cao.ie",
             "Real starting pay: entry-level (under 1 year) physiotherapist averages around 34,194 euro total compensation, rising to around 39,624 euro at 1-4 years experience",
             "Often cited as offering strong salary and job security relative to the points needed to get in, compared to some other CAO courses"
           ],
-          "sources": ["ucd.ie Physiotherapy graduate/undergraduate entry page", "payscale.com Physiotherapist salary Ireland 2026", "irelandpaycalculator.ie Irish college courses guide 2026"],
+          "sources": [
+            "https://www.ucd.ie/registry/prospectivestudents/admissions/undergraduateapplicants/alternativeentryroutes/graduateentrypathways/physiotherapy/",
+            "https://www.payscale.com/research/IE/Job=Physiotherapist/Salary",
+            "https://irelandpaycalculator.ie/courses"
+          ],
           "verifiedDate": "2026-08 (exact points unverified, flagged for review)"
         }
       ]
@@ -77,7 +89,11 @@
             "7 phases total: 3 off-the-job (in a training centre) and 4 on-the-job (with the employer)",
             "Apprentice pay rises by phase: roughly 274 euro/week (Phase 2) up to roughly 740 euro/week gross by 4th year"
           ],
-          "sources": ["careersportal.ie plumbing apprenticeship summary", "qualifax.ie/course/220211", "apprenticeship.ie career-seekers jobs page"],
+          "sources": [
+            "https://cc.careersportal.ie/apprenticeships/app_summary.php?job_id=1250",
+            "https://www.qualifax.ie/course/220211",
+            "https://apprenticeship.ie/career-seekers/jobs"
+          ],
           "verifiedDate": "2026-08"
         }
       ]
@@ -94,11 +110,15 @@
           "facts": [
             "Direct CAO entry to BSc Veterinary Nursing at colleges including DkIT, TUS, ATU, and UCD",
             "Typical entry needs 6 subjects, H5 in two of them, O6/H7 in the remaining four including Maths and a language; a lab science subject is also required, at grades that vary slightly by college",
-            "Heavy demand year on year, with CAO points recently in the region of 400-430 — always verify the current figure at cao.ie",
+            "Heavy demand year on year, with CAO points recently in the region of 400-430 \u2014 always verify the current figure at cao.ie",
             "Alternative entry route: a QQI Level 5 award in any discipline can be used to compete for a place instead of Leaving Cert points",
-            "NEEDS VERIFICATION: no independently sourced Republic of Ireland salary figure found for this draft — only Northern Ireland pay data (roughly £14,000-17,000) turned up; check the Veterinary Council of Ireland or current job listings before using a number"
+            "NEEDS VERIFICATION: no independently sourced Republic of Ireland salary figure found for this draft \u2014 only Northern Ireland pay data (roughly \u00a314,000-17,000) turned up; check the Veterinary Council of Ireland or current job listings before using a number"
           ],
-          "sources": ["qualifax.ie/course/36433", "tus.ie Veterinary Nursing BSc course page", "gradireland.com veterinary surgeon/nurse job description"],
+          "sources": [
+            "https://www.qualifax.ie/course/36433",
+            "https://tus.ie/courses/us738/",
+            "https://gradireland.com/careers-advice/job-descriptions/veterinary-surgeonnurse"
+          ],
           "verifiedDate": "2026-08 (ROI salary unverified, flagged for review)"
         }
       ]
@@ -113,13 +133,17 @@
           "conditions": {},
           "summary": "QQI / on-the-job route (not a formal SOLAS apprenticeship)",
           "facts": [
-            "No SOLAS apprenticeship scheme was found for this role — the real route is QQI-based: a QQI Level 5 Pharmacy Assistant award (or 2+ years full-time pharmacy dispensary experience) as a foundation, then a part-time Pharmacy Technician programme such as TU654 at TU Dublin",
+            "No SOLAS apprenticeship scheme was found for this role \u2014 the real route is QQI-based: a QQI Level 5 Pharmacy Assistant award (or 2+ years full-time pharmacy dispensary experience) as a foundation, then a part-time Pharmacy Technician programme such as TU654 at TU Dublin",
             "Requires working in a pharmacy for a minimum of 20 hours a week for the duration of the course",
             "Programme takes roughly 2 years, combining part-time academic study with practical placement",
-            "No CAO points or full-time college attendance needed — it's a trainee/earn-while-you-learn route into the qualification",
+            "No CAO points or full-time college attendance needed \u2014 it's a trainee/earn-while-you-learn route into the qualification",
             "Real pay: starting salary around 23,157 euro gross/year, average around 29,914 euro gross/year (about 14.38 euro/hour)"
           ],
-          "sources": ["tudublin.ie TU654 Pharmacy Technician Studies course page", "healthcarejobs.ie pharmacy technician career guide", "salaryexpert.com pharmacy technician Ireland 2026"],
+          "sources": [
+            "https://www.tudublin.ie/study/undergraduate/courses/pharmacy-technician-studies-tu654/",
+            "https://www.healthcarejobs.ie/blog/career-pathways/pharmacy-technician-career-guide-how-become-pharmacy-technician-ireland",
+            "https://www.salaryexpert.com/salary/job/pharmacy-technician/ireland"
+          ],
           "verifiedDate": "2026-08"
         }
       ]
@@ -136,10 +160,14 @@
           "facts": [
             "Direct CAO entry to Dental Science / Dentistry, e.g. at Trinity or Cork; consistently one of the highest-points course categories on the CAO",
             "Typical entry needs 6 subjects with H4 in two of them and O6/H7 in the remaining four; a lab science subject is generally required",
-            "NEEDS VERIFICATION: exact current CAO points cutoff not independently confirmed in this draft — verify at cao.ie, as dentistry is consistently one of the highest-points courses",
+            "NEEDS VERIFICATION: exact current CAO points cutoff not independently confirmed in this draft \u2014 verify at cao.ie, as dentistry is consistently one of the highest-points courses",
             "Real pay: average dentist salary reported around 104,315 euro/year, though this spans all experience levels rather than a starting figure specifically"
           ],
-          "sources": ["qualifax.ie/course/2043", "rcsi.com Dentistry entry requirements page", "indeed.com dentist salary Ireland"],
+          "sources": [
+            "https://www.qualifax.ie/course/2043",
+            "https://www.rcsi.com/dublin/undergraduate/dentistry/entry-requirements",
+            "https://ie.indeed.com/career/dentist/salaries"
+          ],
           "verifiedDate": "2026-08 (points and starting-salary figure unverified, flagged for review)"
         }
       ]
@@ -159,7 +187,11 @@
             "Real starting pay: around 33,917-35,500 euro gross for a graduate architect, rising to roughly 45,000-55,000 euro on average with experience",
             "Registration with the RIAI (Royal Institute of the Architects of Ireland) is the recognised path to practising as a qualified architect after the degree and further experience"
           ],
-          "sources": ["riai.ie careers in architecture page", "tudublin.ie TU832 Architecture course page", "jobted.ie architect salary Ireland 2026"],
+          "sources": [
+            "https://www.riai.ie/careers-in-architecture/how-to-become-an-architect",
+            "https://www.tudublin.ie/study/undergraduate/courses/architecture-tu832/",
+            "https://www.jobted.ie/salary/architect"
+          ],
           "verifiedDate": "2026-08"
         }
       ]
@@ -178,9 +210,13 @@
             "After the FE-1, you need a two-year training contract with an eligible solicitor, plus the Professional Practice Course (PPC I, roughly 7 months)",
             "If your degree isn't a recognised Irish/UK law degree (or isn't Level 7+), a preliminary exam or exemption process applies before sitting the FE-1",
             "Real pay: average trainee solicitor salary reported around 30,000 euro, with a wide range (roughly 18,000-51,000 euro) depending on the firm",
-            "CAO points for individual law degree courses weren't independently confirmed in this draft — verify at cao.ie, as they vary a lot by college"
+            "CAO points for individual law degree courses weren't independently confirmed in this draft \u2014 verify at cao.ie, as they vary a lot by college"
           ],
-          "sources": ["lawsociety.ie becoming a solicitor page", "ucc.ie how to become a solicitor in Ireland", "payscale.com trainee solicitor salary Ireland 2026"],
+          "sources": [
+            "https://www.lawsociety.ie/becoming-a-solicitor/not-a-student-or-graduate/",
+            "https://www.ucc.ie/en/law/careers/how-to-become-a-solicitor-in-ireland/",
+            "https://www.payscale.com/research/IE/Job=Trainee_Solicitor/Salary/f6723f18/Entry-Level-Legal-Research"
+          ],
           "verifiedDate": "2026-08 (law degree CAO points unverified, flagged for review)"
         }
       ]
@@ -192,15 +228,21 @@
       "reviewed": false,
       "branches": [
         {
-          "conditions": { "likesMaths": true },
+          "conditions": {
+            "likesMaths": true
+          },
           "summary": "Electrical/Electronic Engineering degree route",
           "facts": [
             "Direct CAO entry, e.g. Electrical & Electronic Engineering at UCC or TUS",
-            "Typical entry needs 5 subjects at O6/H7 and 5 at H5 or higher, with Maths and English/Irish at O6/H7 — most courses specifically require at least H4 in Higher Level Maths regardless of overall points",
-            "One example cutoff found: 348 points at TUS for 2025, but points vary a lot by college and year — verify the current figure at cao.ie",
-            "Real starting pay varies widely by source: roughly 33,575-36,000 euro reported as an average starting salary, though some sources report early-career averages as high as 57,297 euro — treat as a range, not a fixed number"
+            "Typical entry needs 5 subjects at O6/H7 and 5 at H5 or higher, with Maths and English/Irish at O6/H7 \u2014 most courses specifically require at least H4 in Higher Level Maths regardless of overall points",
+            "One example cutoff found: 348 points at TUS for 2025, but points vary a lot by college and year \u2014 verify the current figure at cao.ie",
+            "Real starting pay varies widely by source: roughly 33,575-36,000 euro reported as an average starting salary, though some sources report early-career averages as high as 57,297 euro \u2014 treat as a range, not a fixed number"
           ],
-          "sources": ["qualifax.ie/course/1414", "tus.ie Electrical Engineering BEng course page", "jobted.ie electrical engineer salary Ireland 2026"],
+          "sources": [
+            "https://www.qualifax.ie/course/1414",
+            "https://tus.ie/courses/us900/",
+            "https://www.jobted.ie/salary/electrical-engineer"
+          ],
           "verifiedDate": "2026-08 (salary figures inconsistent across sources, flagged for review)"
         }
       ]
@@ -216,12 +258,16 @@
           "summary": "SOLAS-registered carpentry and joinery apprenticeship",
           "facts": [
             "No CAO points needed: minimum is Grade D in five Junior Cert subjects (or equivalent), age 16+",
-            "Must be hired by a SOLAS-approved employer first, then registered as an apprentice — application goes through SOLAS, not directly through training providers",
+            "Must be hired by a SOLAS-approved employer first, then registered as an apprentice \u2014 application goes through SOLAS, not directly through training providers",
             "4-year, 7-phase programme: phases 1, 3, 5 and 7 are on-the-job with the employer; phases 2, 4 and 6 are block-release college (e.g. Dublin College Dun Laoghaire)",
-            "Apprentice pay is a rising percentage of the qualified craftworker rate during on-the-job phases (paid by the employer) and a SOLAS training allowance during off-the-job phases — exact current euro figures weren't independently confirmed in this draft",
+            "Apprentice pay is a rising percentage of the qualified craftworker rate during on-the-job phases (paid by the employer) and a SOLAS training allowance during off-the-job phases \u2014 exact current euro figures weren't independently confirmed in this draft",
             "Ends in a Level 6 Advanced Craft Certificate"
           ],
-          "sources": ["dkit.ie Carpentry/Joinery apprenticeship page", "courses.ie Carpentry and Joinery apprenticeship listing"],
+          "sources": [
+            "https://www.dkit.ie/courses/school-of-engineering/engineering-trades/carpentry-/-joinery.html",
+            "https://www.courses.ie/course/apprenticeship-carpentry-and-joinery-solas-award-advanced-craft-certificate-108526/",
+            "https://www.qualifax.ie/course/220207"
+          ],
           "verifiedDate": "2026-08 (exact pay figures unverified, flagged for review)"
         }
       ]
@@ -240,9 +286,13 @@
             "Entry requires a pass in English, a pass in Maths (or Foundation Level Maths), and a pass in a language other than English; Garda vetting is required as part of the application",
             "Graduates must register with CORU (the health and social care professions regulator) to practise as a social worker in Ireland",
             "Real pay: average social worker salary reported around 43,517 euro/year",
-            "CAO points weren't independently confirmed in this draft — verify the current figure at cao.ie"
+            "CAO points weren't independently confirmed in this draft \u2014 verify the current figure at cao.ie"
           ],
-          "sources": ["ucc.ie CK115 Social Work course page", "coru.ie social care workers education page", "indeed.com social worker salary Ireland 2026"],
+          "sources": [
+            "https://www.ucc.ie/en/ck115/",
+            "https://coru.ie/health-and-social-care-professionals/education/approved-qualifications/social-care-workers/",
+            "https://ie.indeed.com/career/social-worker/salaries"
+          ],
           "verifiedDate": "2026-08 (points unverified, flagged for review)"
         }
       ]
@@ -261,9 +311,13 @@
             "Typical entry needs 6 subjects, H5 in two of them, O6/H7 in the remaining four",
             "Graduates must register with CORU (Radiographers Registration Board) to practise",
             "Real HSE pay: newly qualified radiographers start around 44,956 euro/year, rising to roughly 64,235 euro at the top of the scale after 16 years; senior radiographer roles (after 3+ years) start around 57,000 euro",
-            "CAO points weren't independently confirmed in this draft — verify the current figure at cao.ie"
+            "CAO points weren't independently confirmed in this draft \u2014 verify the current figure at cao.ie"
           ],
-          "sources": ["ucd.ie Radiography FAQ page", "redundancytaxireland.ie radiographer HSE pay scale", "careersportal.ie diagnostic radiographer summary"],
+          "sources": [
+            "https://www.ucd.ie/medicine/studywithus/undergraduate/radiography/radiographyfrequentlyaskedquestions/",
+            "https://www.redundancytaxireland.ie/public-sector-pay/radiographer-salary/",
+            "https://careersportal.ie/careers/detail.php?job_id=874"
+          ],
           "verifiedDate": "2026-08 (points unverified, flagged for review)"
         }
       ]
@@ -282,9 +336,13 @@
             "Requires a minimum H4 in a Lab Science subject at Leaving Cert",
             "Course includes 1,000+ hours of practice placements across healthcare, education and community settings; accredited by the World Federation of Occupational Therapy and regulated by CORU",
             "Real pay: new graduates (under 3 years) average around 39,000 euro/year, with the overall average around 50,134 euro/year and senior specialists earning more",
-            "CAO points weren't independently confirmed in this draft — verify the current figure at cao.ie"
+            "CAO points weren't independently confirmed in this draft \u2014 verify the current figure at cao.ie"
           ],
-          "sources": ["ucc.ie CK704 Occupational Therapy course page", "healthcarejobs.ie occupational therapist pay guide", "jobted.ie occupational therapist salary Ireland 2026"],
+          "sources": [
+            "https://www.ucc.ie/en/ck704/",
+            "https://www.healthcarejobs.ie/blog/pay/occupational-therapy-salary-guide",
+            "https://www.jobted.ie/salary/occupational-therapist"
+          ],
           "verifiedDate": "2026-08 (points unverified, flagged for review)"
         }
       ]
@@ -302,9 +360,13 @@
             "No CAO points needed: minimum is Grade D (or 'Achieved') in five Junior Cert subjects, age 16+; a pre-apprenticeship course or 3 years of relevant work experience over age 16 can substitute",
             "Must pass the Ishihara Colour Vision Test as part of entry",
             "Must be hired by a SOLAS-approved employer, who registers you as an apprentice within 2 weeks of hiring",
-            "Pay is a rising percentage of the fully qualified rate during on-the-job phases, plus a training allowance during off-the-job training — exact current euro figures weren't independently confirmed in this draft"
+            "Pay is a rising percentage of the fully qualified rate during on-the-job phases, plus a training allowance during off-the-job training \u2014 exact current euro figures weren't independently confirmed in this draft"
           ],
-          "sources": ["simi.ie motor industry apprenticeship page", "careersportal.ie motor mechanic apprenticeship summary", "apprenticeship.ie motor mechanics L6 page"],
+          "sources": [
+            "https://www.simi.ie/en/careers-overview/motor-industry-apprentices",
+            "https://cc.careersportal.ie/apprenticeships/app_summary.php?job_id=1247",
+            "https://apprenticeship.ie/career-seekers/get-started/learn-more/motor/motor-mechanics-l6"
+          ],
           "verifiedDate": "2026-08 (exact pay figures unverified, flagged for review)"
         }
       ]
@@ -322,9 +384,13 @@
             "No CAO points needed: minimum is Grade D (or 'Achieved') in five Junior Cert subjects, age 16+; a pre-apprenticeship course or 3 years of relevant work experience over age 16 can substitute",
             "May be required to pass the Ishihara Colour Vision Test",
             "Must be hired by a SOLAS-approved employer first, then registered as an apprentice",
-            "Pay has two parts: a training allowance during off-the-job training, and an apprentice rate during on-the-job phases — exact current euro figures weren't independently confirmed in this draft"
+            "Pay has two parts: a training allowance during off-the-job training, and an apprentice rate during on-the-job phases \u2014 exact current euro figures weren't independently confirmed in this draft"
           ],
-          "sources": ["tudublin.ie Brick & Stone Laying apprenticeship page", "careersportal.ie bricklayer/stonelaying apprenticeship summary", "qualifax.ie/course/102085"],
+          "sources": [
+            "https://www.tudublin.ie/study/apprenticeships/apprenticeship-courses/brick-stone-laying/",
+            "https://cc.careersportal.ie/apprenticeships/app_summary.php?job_id=1233",
+            "https://www.qualifax.ie/course/102085"
+          ],
           "verifiedDate": "2026-08 (exact pay figures unverified, flagged for review)"
         }
       ]
