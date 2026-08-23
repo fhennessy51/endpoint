@@ -371,25 +371,32 @@ setMode('wizard');
 const IRISH_PLACES = ['ireland', 'dublin', 'cork', 'galway', 'limerick', 'waterford', 'sligo', 'athlone', 'kilkenny', 'tralee', 'drogheda', 'home'];
 
 function parseText(text) {
-  const lower = text.toLowerCase();
+  // normalise casual contractions so "wanna"/"gonna" behave like "want to"/"going to"
+  const lower = text.toLowerCase()
+    .replace(/\bwanna\b/g, 'want to')
+    .replace(/\bgonna\b/g, 'going to');
   const result = {};
 
-  if (/\bno college\b|\bnot go(ing)? to college\b|\bdon.?t want (to )?(go to )?college\b|\bnot interested in college\b|\bwithout college\b|\bskip college\b|\bapprenticeship\b|\btrade\b/.test(lower)) {
+  // negation-proximity: catches "don't want ... college", "not really into college",
+  // "no interest in college" etc. without needing an exact phrase match
+  const negNear = (word) => new RegExp(`\\b(no|not|don.?t|never|isn.?t)\\b[^.!?,]{0,20}\\b${word}\\b`).test(lower);
+
+  if (negNear('college') || /\bapprenticeship\b|\btrade\b|\bwithout college\b|\bskip college\b/.test(lower)) {
     result.college = false;
   } else if (/\bcollege\b|\buniversity\b|\bdegree\b|\buni\b|\bthird level\b/.test(lower)) {
     result.college = true;
   }
 
-  const abroadMentioned = /\babroad\b|\banother country\b|\boverseas\b/.test(lower);
-  if (!abroadMentioned && (/\bstay(ing)? (in|home)\b/.test(lower) || IRISH_PLACES.some(p => lower.includes(`in ${p}`)))) {
+  const stayPhrase = /\bstay(ing)? (in|home)\b/.test(lower) || IRISH_PLACES.some(p => lower.includes(`in ${p}`));
+  if (stayPhrase || negNear('mov(e|ing)') || negNear('abroad') || negNear('leav(e|ing)')) {
     result.openToMoving = false;
   } else if (/\bmove abroad\b|\bmove away\b|\babroad\b|\bopen to moving\b|\bcan move\b|\bwilling to move\b|\brelocate\b|\boverseas\b/.test(lower)) {
     result.openToMoving = true;
   }
 
-  if (/\b(hate|bad at|not good at|dislike|don.?t like|not into|no good at)\s+maths?\b/.test(lower)) {
+  if (negNear('maths?') || /\b(hate|bad at|dislike)\s+maths?\b/.test(lower)) {
     result.likesMaths = false;
-  } else if (/\b(like|love|good at|great at|enjoy)\s+maths?\b|\bmaths?\b/.test(lower)) {
+  } else if (/\bmaths?\b/.test(lower)) {
     result.likesMaths = true;
   }
 
@@ -410,7 +417,7 @@ function parseText(text) {
   const salaryMatch = lower.match(/(?:€|euro\s*)?(\d{2,3})\s*k\b|(\d{2,3}),?000\s*(euro|a year)/);
   if (salaryMatch) extras.push(`a target salary around €${salaryMatch[1] || salaryMatch[2]}k`);
   const fields = ['business', 'tech', 'software', 'nursing', 'teaching', 'law', 'engineering', 'finance', 'trades', 'hair', 'medicine', 'accounting', 'history', 'art', 'science', 'psychology', 'music', 'sport'];
-  const foundField = fields.find(f => lower.includes(f));
+  const foundField = fields.find(f => new RegExp(`\\b${f}\\b`).test(lower));
   if (foundField) extras.push(`an interest in ${foundField}`);
 
   return { result, extras };
