@@ -11,13 +11,13 @@
           "facts": [
             "No CAO points needed: minimum is Grade D in five Junior Cert subjects, age 16+, plus a colour vision test",
             "Earn while you learn over 4 years across 7 phases, minimum 208 weeks served",
-            "Apprentice pay starts low (roughly 5-10 euro/hour) and rises as a percentage of the fully qualified rate through the phases",
+            "Apprentice pay starts around 9-10 euro/hour in Year 1 (roughly 35% of the qualified electrician rate) and rises through the phases as a percentage of the fully qualified rate",
             "Ends in a Level 6 Advanced Craft Certificate, recognised nationally and internationally"
           ],
           "sources": [
-            "qualifax.ie/course/220217",
-            "careersportal.ie electrical apprenticeship summary",
-            "payscale.com IE apprentice electrician entry-level pay"
+            "https://www.qualifax.ie/course/220217",
+            "https://aeci.ie/wp-content/uploads/2025/09/HOURLY-RATES-Aug-2024-1.pdf",
+            "https://www.payscale.com/research/IE/Job=Apprentice_Electrician/Hourly_Rate"
           ],
           "verifiedDate": "2026-08"
         }
@@ -150,9 +150,9 @@
           "facts": [
             "CAO points vary a lot by course and college, roughly 300-500+, always check the specific course at cao.ie",
             "Most computing courses want or require Higher Level Maths",
-            "Real salary data example (UCC): mid-level developer 50,000-65,000 euro, senior 80,000-110,000 euro"
+            "Morgan McKinley's 2026 Ireland Salary Guide puts average Software Engineer pay at 50,000-70,000 euro, rising to 80,000-90,000 euro for Principal/Lead/Staff level"
           ],
-          "sources": ["ucc.ie CK401 Computer Science course page"],
+          "sources": ["https://www.morganmckinley.com/ie/salary-guide/data/software-engineer/ireland", "https://www.ucc.ie/en/ck401/"],
           "verifiedDate": "2026-08"
         }
       ]
@@ -223,7 +223,8 @@
           "conditions": {},
           "summary": "Accounting Technicians Ireland apprenticeship",
           "facts": [
-            "Needs 300 CAO points (or equivalent) with a pass in English and Maths or Accounting, though a PLC can substitute for the points requirement",
+            "Needs 300 CAO points (or equivalent) with a pass in English and Maths or Accounting — this is a national entry standard set by Accounting Technicians Ireland, not tied to one specific college; verify the current figure at accountingtechniciansireland.ie, as it can change",
+            "Not delivered at one university — partner colleges are spread nationwide, including Dunboyne College (Meath), Rathmines College and BFEI Blackrock (Dublin), Monaghan Institute, and GRETB (Galway/Roscommon); a PLC can also substitute for the points requirement",
             "2-year, earn-while-you-learn programme, 4 days a week with an employer, 1 day a week at a partner college",
             "Real starting pay reported in the range of roughly 21,000-27,600 euro a year depending on employer",
             "Ends in a QQI Level 6 Advanced Certificate in Accounting and ATI membership, with a real progression path to a Level 8 Accounting Technologist degree or full chartered accountancy afterward"
