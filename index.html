@@ -226,12 +226,12 @@
   .disclaimer {
     background: var(--accent-soft);
     border: 1px solid var(--accent);
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-bottom: 28px;
-    font-size: 13px;
+    border-radius: 8px;
+    padding: 9px 12px;
+    margin-bottom: 24px;
+    font-size: 12px;
     color: var(--ink);
-    line-height: 1.55;
+    line-height: 1.45;
   }
   .disclaimer strong { color: var(--accent); }
   footer {
@@ -249,7 +249,7 @@
 <p class="lede">Tell it what you want, not just who you are. See real Irish paths — degree, apprenticeship, or direct entry — matched to your actual goal.</p>
 
 <div class="disclaimer">
-  <strong>Unverified prototype.</strong> This is a student-built research tool, not reviewed or endorsed by a career guidance professional. Facts, points requirements, and salary figures may be outdated or incomplete — always confirm anything here with a guidance counsellor and official sources (cao.ie, qualifax.ie) before making any decision.
+  <strong>Unverified prototype</strong> — not reviewed by a career guidance professional. Confirm anything here with a counsellor and official sources (cao.ie, qualifax.ie) before deciding.
 </div>
 
 <div class="tabs">
@@ -317,7 +317,7 @@ document.getElementById('globalReset').addEventListener('click', () => {
   document.getElementById('chatInput').value = '';
   document.getElementById('understood').style.display = 'none';
   renderWizardStep();
-  setMode('wizard');
+  setMode('chat');
   render();
 });
 
@@ -380,7 +380,7 @@ function restartWizard() {
 }
 
 renderWizardStep();
-setMode('wizard');
+setMode('chat');
 
 // ---------- chat ----------
 const IRISH_PLACES = ['ireland', 'dublin', 'cork', 'galway', 'limerick', 'waterford', 'sligo', 'athlone', 'kilkenny', 'tralee', 'drogheda', 'home'];
